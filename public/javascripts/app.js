@@ -5,11 +5,9 @@ app.factory('WatsonIoT',function(){
 
 app.controller('lineChart', function($rootScope, $scope) {
 
-    $rootScope.labels = [];
+    $scope.labels = $rootScope.labels;
     $rootScope.series = ['Sine'];
-    $rootScope.data = [
-	[]
-    ];
+    $scope.data = $rootScope.data;
 
     $rootScope.onClick = function (points, evt) {
 	console.log(points, evt);
@@ -37,8 +35,8 @@ app.controller('main',['$rootScope','$scope','WatsonIoT',function($rootScope,$sc
     $scope.main.AuthToken =""
     $scope.main.OrgId =""
     $scope.main.EventLog =""
-/*    $scope.labels = [];
-    $scope.data = [];*/
+    $rootScope.labels = [];
+    $rootScope.data = [];
     $rootScope.dataArray =[];
     
     var appClient  = null;
@@ -64,7 +62,6 @@ app.controller('main',['$rootScope','$scope','WatsonIoT',function($rootScope,$sc
 
 	appClient.on("deviceEvent", function (deviceType, deviceId, eventType, format, payload) {
 	    $rootScope.labels.push(Date.now());
-//	    vc.series = ['Sine'];
 	    var obj = JSON.parse(payload);
 	    var data = obj['d'];
 	    var val = data['sine'];
