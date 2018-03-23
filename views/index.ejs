@@ -24,7 +24,7 @@
 	    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 	  </li>
 	  <li class="nav-item active">
-	    <a class="nav-link" href="#">Link</a>
+	    <a class="nav-link" href="#">Pricing</a>
 	  </li>
 	  <li class="nav-item dropdown">
 	    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
@@ -35,9 +35,9 @@
 	      <a class="dropdown-item" href="#">Sign In</a>
             </div>
 	  </li>
-	  <li class="nav-item">
-	    <a class="nav-link  disabled" href="#">Disabled</a>
-	  </li>
+	  <!--li class="nav-item">
+	    <a class="nav-link  disabled" href="#">Admin</a>
+	  </li-->
 	</ul>
 	<form class="form-inline my-2 my-lg-0">
 	  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -50,7 +50,8 @@
     <div ng-controller="main">
       <div class="jumbotron">
 	<h1 class="display-4 text-center">Kaman IIoT</h1>
-
+	<h2 class="display-2 text-center">Fluid Data</h2>
+	
 	<h5><i>(Please enter the below details and click connect)</i></h5>
 	<form ng-submit="main.connect()">
           <label for="OrgId">OrgId : </label>
