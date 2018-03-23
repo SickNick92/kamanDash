@@ -1,0 +1,27 @@
+body {
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+form {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+h5 {
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.jumbotron {
+    background-image: url("../images/Internet-of-things.jpeg");
+    background-size: cover;
+}
+
+.events {
+    color: #00B7FF;;
+}

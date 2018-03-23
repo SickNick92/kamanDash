@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KamanIIoT App</title>
+    
+    <!-- Stylesheets -->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/bootstrap.min.css' />
+    
+  </head>
+  
+  <body ng-app="IoTApp">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Kaman IIoT </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	<ul class="navbar-nav mr-auto">
+	  <li class="nav-item active">
+	    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+	  </li>
+	  <li class="nav-item active">
+	    <a class="nav-link" href="#">Link</a>
+	  </li>
+	  <li class="nav-item dropdown">
+	    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+	    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	      <a class="dropdown-item" href="#">About Us</a>
+	      <a class="dropdown-item" href="#">Contact Us</a>
+	      <div class="dropdown-divider"></div>
+	      <a class="dropdown-item" href="#">Sign In</a>
+            </div>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link  disabled" href="#">Disabled</a>
+	  </li>
+	</ul>
+	<form class="form-inline my-2 my-lg-0">
+	  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+	  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	</form>
+      </div>
+    </nav>
+    
+    <!-- Render IoT App -->
+    <div ng-controller="main">
+      <div class="jumbotron">
+	<h1 class="display-4 text-center">Kaman IIoT</h1>
+
+	<h5><i>(Please enter the below details and click connect)</i></h5>
+	<form ng-submit="main.connect()">
+          <label for="OrgId">OrgId : </label>
+          <input id="OrgId" type="text" ng-model="main.OrgId" required> <br/><br/>
+          <label for="APIKey">APIKey : </label>
+          <input id="APIKey" type="text" ng-model="main.APIKey" required><br/><br/>
+          <label for="AuthToken">AuthToken : </label>
+          <input id="AuthToken" type="password" ng-model="main.AuthToken" required><br/><br/>
+          <input type="submit" value="Connect" >
+	</form>
+      </div>
+
+      <!-- Line Chart -->
+      <div class="container">
+	<div class="card justify-content-center" ng-controller="lineChart">
+	  <div class="card-body">
+	    <div class="card-header">Line Chart</div>
+	    <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick"></canvas>
+	  </div>
+	</div>
+      </div>
+    
+      <h4  ng-show="main.EventLog" >Device Event Log </h4>
+      <pre class="events" ng-show="main.EventLog" style="height:200px;overflow-y:auto">{{main.EventLog}}</pre>
+    </div>
+    
+    <!-- Footer -->
+    <p class="text-center text-muted">Copyright 2018 Kaman Corp.</p>
+    
+    <!-- AngularJS -->
+    <script src="/angular.js"></script>
+
+    <!-- Angular-Chart.js -->
+    <script src="/chart.js/dist/Chart.min.js"></script>
+    <script src="/angular-chart.js/dist/angular-chart.min.js"></script>
+    
+    <!-- IBM IoT Client -->
+    <script src="/iotf-client-bundle.min.js"></script>
+
+    <!-- Jquery -->
+    <script src="/jquery.slim.min.js"></script>
+
+    <!-- jqplot.js -->
+    <script src="/jqplot/jquery.jqplot.min.js"></script>
+
+    <!-- Bootstraps -->
+    <script src="/bootstrap.bundle.min.js"></script>
+
+    <!-- Angular App -->
+    <script src="/javascripts/app.js"></script>
+    
+  </body>
+</html>

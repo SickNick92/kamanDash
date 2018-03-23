@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://blogs.microsoft.com/iot/xmlrpc.php">
+
+<!-- BI -->
+<meta name="ms.sitever" content="1.0">
+<meta name="ms.env" content="prod">
+<meta name="ms.lang" content="en">
+<meta name="ms.loc" content="us">
+
+<title>Simplifying IoT - Internet of Things</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v7.0.2 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://blogs.microsoft.com/iot/2015/03/17/simplifying-iot/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Simplifying IoT - Internet of Things" />
+<meta property="og:description" content="Over the past year, we’ve talked a lot about the Internet of Things (IoT). But what exactly is it? And what does it mean for businesses? This brief explainer breaks it all down and simply describes how IoT is changing the business world and providing decision makers with incredible insights to help them run their business smarter..." />
+<meta property="og:url" content="https://blogs.microsoft.com/iot/2015/03/17/simplifying-iot/" />
+<meta property="og:site_name" content="Internet of Things" />
+<meta property="article:section" content="Microsoft IoT" />
+<meta property="article:published_time" content="2015-03-17T13:12:29-07:00" />
+<meta property="article:modified_time" content="2016-07-19T15:18:09-07:00" />
+<meta property="og:updated_time" content="2016-07-19T15:18:09-07:00" />
+<meta property="og:image" content="http://mscorpmedia.azureedge.net/mscorpmedia/2015/03/BM-blog.jpg" />
+<meta property="og:image:width" content="339" />
+<meta property="og:image:height" content="213" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Over the past year, we’ve talked a lot about the Internet of Things (IoT). But what exactly is it? And what does it mean for businesses? This brief explainer breaks it all down and simply describes how IoT is changing the business world and providing decision makers with incredible insights to help them run their business smarter..." />
+<meta name="twitter:title" content="Simplifying IoT - Internet of Things" />
+<meta name="twitter:image" content="http://mscorpmedia.azureedge.net/mscorpmedia/2015/03/BM-blog.jpg" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//az725175.vo.msecnd.net' />
+<link rel='dns-prefetch' href='//assets.onestore.ms' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Internet of Things &raquo; Feed" href="https://blogs.microsoft.com/iot/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Internet of Things &raquo; Comments Feed" href="https://blogs.microsoft.com/iot/comments/feed/" />
+     <script>
+		function clicktaleTracking() {
+			var s = document.createElement( 'script' );
+			var src = "https://cdnssl.clicktale.net/www07/ptc/959721af-e707-44b6-9b6a-d14f3ec0f756.js";
+			s.setAttribute( 'src', src );
+			document.body.appendChild( s );
+		}
+     </script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/blogs.microsoft.com\/iot\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='ms-blogs-style-css'  href='https://blogs.microsoft.com/iot/wp-content/themes/ms-blogs/style.min.css?ver=1.3.1' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='style-ie8-css'  href='https://blogs.microsoft.com/iot/wp-content/themes/ms-blogs/style-ie8.min.css?ver=1.3.1' type='text/css' media='screen' />
+<![endif]-->
+<link rel='stylesheet' id='jetpack_css-css'  href='https://blogs.microsoft.com/iot/wp-content/plugins/jetpack/css/jetpack.css?ver=5.9' type='text/css' media='all' />
+<script type='text/javascript' src='https://blogs.microsoft.com/iot/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://blogs.microsoft.com/iot/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://blogs.microsoft.com/iot/wp-content/plugins/jetpack/_inc/build/related-posts/related-posts.min.js?ver=20150408'></script>
+<script type='text/javascript' src='https://az725175.vo.msecnd.net/scripts/jsll-4.js'></script>
+<script type='text/javascript' src='https://blogs.microsoft.com/iot/wp-content/themes/ms-blogs/mwf/scripts/vendor/modernizr.min.js?ver=3.3.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blogs.microsoft.com/iot/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://blogs.microsoft.com/iot/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.4" />
+<link rel='shortlink' href='https://wp.me/p5hcLT-1EN' />
+<link rel="alternate" type="application/json+oembed" href="https://blogs.microsoft.com/iot/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblogs.microsoft.com%2Fiot%2F2015%2F03%2F17%2Fsimplifying-iot%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://blogs.microsoft.com/iot/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblogs.microsoft.com%2Fiot%2F2015%2F03%2F17%2Fsimplifying-iot%2F&#038;format=xml" />
+<link rel="stylesheet" href="https://statics-uhf-eus.akamaized.net/west-european/shell/_scrf/css/themes=default.device=uplevel_web_pc/48-4569b5/3c-162243/ea-687fe8/2b-450314/42-bd6a69/d1-038968/3c-12a025?ver=2.0" type="text/css" media="all" /><link rel='stylesheet' href='https://statics-uhf-eus.akamaized.net/statics/override.css' type='text/css' /><link rel='stylesheet' href='https://uhf.microsoft.com/mscc/statics/mscc-0.4.0.min.css' type='text/css' /><!-- Stream WordPress user activity plugin v3.2.2 -->
+
+<link rel='dns-prefetch' href='//v0.wordpress.com'/>
+<style type='text/css'>img#wpstats{display:none}</style>	<meta name="awa-pageType" content="Post">
+	<meta name="awa-market" content="en-us">
+	<meta name="awa-env" content="Production">
+	<!-- JSLL tracking -->
+	<script>
+		var config = {
+			syncMuid: awa.utils.isValueAssigned(awa.cookie.getCookie("MSCC")),
+			userConsentCookieName: "MSCC",
+			coreData: {
+				appId: "CorpBlogs",
+			},
+		};
+		awa.init(config);
+	</script>
+				<style type="text/css" id="wp-custom-css">
+				/*
+You can add your own CSS here.
+
+Click the help icon above to learn more.
+*/
+
+.c-me .msame_Header {display: none; }			</style>
+		<script src="https://statics-uhf-eus.akamaized.net/shell/_scrf/js/themes=default/e8-1a2c1d/cb-ac922a/e6-bf47bb/b4-95d116/24-d7e7f4/8b-69e74f/e0-91371b/7e-793d88/d1-2b95bb/d8-ab9315/31-d1ef90/55-14fceb/b2-4f864e/62-69d670/31-f19446/b4-019073/40-e2e898/fc-e9ae0b/df-1dbe87/c9-92ebeb/1c-874c56/33-e5f0bf/e3-f83824/79-8a7614/19-091f7c/fd-6d2897/7a-7a4723/82-2940d9/46-380f2c/f3-8b0931/93-f95742?ver=2.0&iife=1"></script><script src="https://mem.gfx.ms/meversion?partner=MSBlogs&market=en-us" defer></script><script src="https://uhf.microsoft.com/mscc/statics/mscc-0.4.0.min.js"></script>
+</head>
+
+<body class="post-template-default single single-post postid-6373 single-format-standard microsoft-uhf group-blog">
+<div id="page" class="context-mnc">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	
+		<section id="headerArea"  data-m='{"cN":"headerArea","cT":"Area_coreuiArea","id":"a1Body","sN":1,"aN":"Body"}'>
+                    <div id="headerRegion"       data-region-key="headerregion" data-m='{"cN":"headerRegion","cT":"Region_coreui-region","id":"r1a1","sN":1,"aN":"a1"}' >
+
+    <div  id="headerUniversalHeader" data-m='{"cN":"headerUniversalHeader","cT":"Module_coreui-universalheader","id":"m1r1a1","sN":1,"aN":"r1a1"}'  data-module-id="Category|headerRegion|headerRegion|headerUniversalHeader|coreui-universalheader">
+        
+
+
+
+        <div id="epb" class="x-hidden x-hidden-vp1 x-hidden-vp2 uhfc-universal-context context-uhf" data-m='{"cN":"epb_cont","cT":"Container","id":"c1m1r1a1","sN":1,"aN":"m1r1a1"}'>
+
+
+
+<div class="c-uhfh-alert f-information epb-container epb-default-color" role="alert" data-m='{"cT":"Container","id":"c1c1m1r1a1","sN":1,"aN":"c1m1r1a1"}'   >
+    <div>        
+        <p class="c-paragraph">
+                <img alt="Microsoft Edge" data-src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REZlo1?ver=5722" class="f-img-lzy" />
+
+            <span class="c-text-group">
+                <span class="epb-launch">Try Microsoft Edge</span>
+                <span class="epb-text">A fast and secure browser that&#39;s designed for Windows 10</span>
+            </span>
+            <span class="c-group">
+                <button id="close-epb" class="c-action-trigger c-action-cancel glyph-cancel" data-m='{"cN":"EPB-dismiss_nonnav","id":"nn1c1c1m1r1a1","sN":1,"aN":"c1c1m1r1a1"}'  aria-label="No thanks, I&#39;ll try Microsoft Edge later. ">No thanks</button>
+                <a id="epbTryNow" data-telem-qsp="form=MY009W" aria-label="Get Started: Open this page in Microsoft Edge" class="epb-launch c-action-trigger c-action-open" data-m='{"cN":"EPB-launch_nav","id":"n2c1c1m1r1a1","sN":2,"aN":"c1c1m1r1a1"}'>Get started</a>
+            </span>
+
+        </p>
+    </div>
+</div>
+
+
+            
+        </div>
+
+        <div data-m='{"cN":"cookiebanner_cont","cT":"Container","id":"c2c1m1r1a1","sN":2,"aN":"c1m1r1a1"}'>
+
+<div id="uhfCookieAlert">
+    <div id='msccBanner' dir='ltr' data-site-name='Microsoft.OneRenderFramework.Core' data-mscc-version='0.4.0' data-nver='aspnet-2.0.7' data-sver='0.1.2' class='cc-banner' role='alert'><div class='cc-container'><svg class='cc-icon cc-v-center' x='0px' y='0px' viewBox='0 0 44 44' height='30px' fill='none' stroke='currentColor'><circle cx='22' cy='22' r='20' stroke-width='2'></circle><line x1='22' x2='22' y1='18' y2='33' stroke-width='3'></line><line x1='22' x2='22' y1='12' y2='15' stroke-width='3'></line></svg> <span class='cc-v-center cc-text'>This site uses cookies for analytics, personalized content and ads. By continuing to browse this site, you agree to this use.</span> <a href='https://go.microsoft.com/fwlink/?linkid=845480' aria-label='Learn more about Microsoft&#39;s Cookie Policy' id='msccLearnMore' class='cc-link cc-v-center cc-float-right' data-mscc-ic='false'>Learn more</a></div></div>
+</div>
+
+            
+        </div>
+
+
+
+<header role="banner" class="c-uhfh context-uhf no-js " itemscope="itemscope" data-header-footprint="en-us/MSBlogs/MSBlogsIOTHeader" data-ckrate="1" data-magict="true"  itemtype="http://schema.org/Organization">
+    <div class="theme-light js-global-head f-closed " data-m='{"cN":"Universal Header_cont","cT":"Container","id":"c3c1m1r1a1","sN":3,"aN":"c1m1r1a1"}'>
+        <div class="c-uhfh-gcontainer">
+            <button class="c-action-trigger c-glyph glyph-global-nav-button" aria-label="Header navigation menu" aria-expanded="false" data-m='{"cN":"Mobile menu button_nonnav","id":"nn1c3c1m1r1a1","sN":1,"aN":"c3c1m1r1a1"}'></button>
+            <button class="c-action-trigger c-glyph glyph-arrow-htmllegacy" aria-label="Close search" aria-expanded="false" data-m='{"cN":"Close Search_nonnav","id":"nn2c3c1m1r1a1","sN":2,"aN":"c3c1m1r1a1"}'></button>
+                    <a id="uhfLogo" class="c-logo" itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" data-m='{"cN":"GlobalNav_Logo_cont","cT":"Container","id":"c3c3c1m1r1a1","sN":3,"aN":"c3c1m1r1a1"}'>
+                        <img itemprop="logo" itemscope="itemscope" class="c-image" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" role="none" />
+                        <span role="none">Microsoft</span>
+                    </a>
+            <div class="f-mobile-title">
+                <button class="c-action-trigger c-glyph glyph-chevron-left" aria-label="See more menu options" data-m='{"cN":"Mobile back button_nonnav","id":"nn4c3c1m1r1a1","sN":4,"aN":"c3c1m1r1a1"}'></button>
+                <span data-global-title="Microsoft home" class="js-mobile-title">Microsoft Internet of Things </span>
+                <button class="c-action-trigger c-glyph glyph-chevron-right" aria-label="See more menu options" data-m='{"cN":"Mobile forward button_nonnav","id":"nn5c3c1m1r1a1","sN":5,"aN":"c3c1m1r1a1"}'></button>
+            </div>
+
+            
+            <button class="c-action-trigger c-glyph glyph-chevron-left js-primary-paddle" data-m='{"cN":"Previous_nonnav","id":"nn6c3c1m1r1a1","sN":6,"aN":"c3c1m1r1a1"}' aria-label="Show previous" tabindex="-1"></button>
+            
+                    <nav id="uhf-g-nav" class="c-uhfh-gnav" aria-labelledby="uhfLogo" role="navigation" data-m='{"cN":"Global nav_cont","cT":"Container","id":"c7c3c1m1r1a1","sN":7,"aN":"c3c1m1r1a1"}'>
+            <ul class="js-paddle-items" role="none"><li>
+                            <div class="c-uhf-menu js-nav-menu">
+
+                                <button id="Store-navigation" aria-expanded="false" aria-haspopup="true" data-m='{"cN":"GlobalNav_Store_nonnav","id":"nn1c7c3c1m1r1a1","sN":1,"aN":"c7c3c1m1r1a1"}' style="white-space:nowrap">Store</button>
+                                <ul class="" aria-labelledby="Store-navigation" aria-hidden="true" data-m='{"cN":"Store_cont","cT":"Container","id":"c2c7c3c1m1r1a1","sN":2,"aN":"c7c3c1m1r1a1"}' role="none">
+    <li class="js-nav-menu" data-m='{"cN":"Store_StoreHome_cont","cT":"Container","id":"c1c2c7c3c1m1r1a1","sN":1,"aN":"c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_1" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/home" data-m='{"cN":"GlobalNav_Store_StoreHome_nav","id":"n1c1c2c7c3c1m1r1a1","sN":1,"aN":"c1c2c7c3c1m1r1a1"}'>Store home</a>
+        
+    </li>
+    <li class="f-sub-menu js-nav-menu" data-m='{"cN":"Store_Devices_cont","cT":"Container","id":"c2c2c7c3c1m1r1a1","sN":2,"aN":"c2c7c3c1m1r1a1"}'>
+
+        <button id="Devices-navigation"  aria-expanded="false" data-m='{"cN":"GlobalNav_Store_Devices_nonnav","id":"nn1c2c2c7c3c1m1r1a1","sN":1,"aN":"c2c2c7c3c1m1r1a1"}'>Devices</button>
+        <ul aria-labelledby="Devices-navigation" aria-hidden="true" role="none">
+    <li class="js-nav-menu" data-m='{"cN":"Store_Device_MicrosoftSurface_cont","cT":"Container","id":"c2c2c2c7c3c1m1r1a1","sN":2,"aN":"c2c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_3" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/surface?icid=TopNavDevicesSurface" data-m='{"cN":"GlobalNav_Store_Device_MicrosoftSurface_nav","id":"n1c2c2c2c7c3c1m1r1a1","sN":1,"aN":"c2c2c2c7c3c1m1r1a1"}'>Microsoft Surface</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Store_Devices_PCsandTablets_cont","cT":"Container","id":"c3c2c2c7c3c1m1r1a1","sN":3,"aN":"c2c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_4" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/pc?icid=TopNavDevicesPC" data-m='{"cN":"GlobalNav_Store_Devices_PCsandTablets_nav","id":"n1c3c2c2c7c3c1m1r1a1","sN":1,"aN":"c3c2c2c7c3c1m1r1a1"}'>PCs &amp; tablets</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Store_Device_Xbox_cont","cT":"Container","id":"c4c2c2c7c3c1m1r1a1","sN":4,"aN":"c2c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_5" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/xbox?icid=TopNavDevicesXbox" data-m='{"cN":"GlobalNav_Store_Device_Xbox_nav","id":"n1c4c2c2c7c3c1m1r1a1","sN":1,"aN":"c4c2c2c7c3c1m1r1a1"}'>Xbox</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Store_Devices_VirtualandMixedReality_cont","cT":"Container","id":"c5c2c2c7c3c1m1r1a1","sN":5,"aN":"c2c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_6" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/virtualreality?icid=TopNavVirtualReality" data-m='{"cN":"GlobalNav_Store_Devices_VirtualandMixedReality_nav","id":"n1c5c2c2c7c3c1m1r1a1","sN":1,"aN":"c5c2c2c7c3c1m1r1a1"}'>Virtual &amp; mixed reality</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Store_Device_Accessories_cont","cT":"Container","id":"c6c2c2c7c3c1m1r1a1","sN":6,"aN":"c2c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_7" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/accessories?icid=TopNavDevicesAccessories" data-m='{"cN":"GlobalNav_Store_Device_Accessories_nav","id":"n1c6c2c2c7c3c1m1r1a1","sN":1,"aN":"c6c2c2c7c3c1m1r1a1"}'>Accessories</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Store_Devices_WindowsPhone_cont","cT":"Container","id":"c7c2c2c7c3c1m1r1a1","sN":7,"aN":"c2c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_8" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/mobile?icid=TopNavDevicesWindowsPhone" data-m='{"cN":"GlobalNav_Store_Devices_WindowsPhone_nav","id":"n1c7c2c2c7c3c1m1r1a1","sN":1,"aN":"c7c2c2c7c3c1m1r1a1"}'>Windows phone</a>
+        
+    </li>
+        </ul>
+        
+    </li>   
+    <li class="f-sub-menu js-nav-menu" data-m='{"cN":"Store_SoftwareAndApps_cont","cT":"Container","id":"c3c2c7c3c1m1r1a1","sN":3,"aN":"c2c7c3c1m1r1a1"}'>
+
+        <button id="Software&amp;Apps-navigation"  aria-expanded="false" data-m='{"cN":"GlobalNav_Store_SoftwareAndApps_nonnav","id":"nn1c3c2c7c3c1m1r1a1","sN":1,"aN":"c3c2c7c3c1m1r1a1"}'>Software &amp; Apps</button>
+        <ul aria-labelledby="Software&amp;Apps-navigation" aria-hidden="true" role="none">
+    <li class="js-nav-menu" data-m='{"cN":"Store_SoftwareAndApps_Office_cont","cT":"Container","id":"c2c3c2c7c3c1m1r1a1","sN":2,"aN":"c3c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_10" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/office?icid=TopNavSoftwareOffice" data-m='{"cN":"GlobalNav_Store_SoftwareAndApps_Office_nav","id":"n1c2c3c2c7c3c1m1r1a1","sN":1,"aN":"c2c3c2c7c3c1m1r1a1"}'>Office</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Store_SoftwareAndApps_Windows_cont","cT":"Container","id":"c3c3c2c7c3c1m1r1a1","sN":3,"aN":"c3c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_11" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/windows?icid=TopNavSoftwareWindows" data-m='{"cN":"GlobalNav_Store_SoftwareAndApps_Windows_nav","id":"n1c3c3c2c7c3c1m1r1a1","sN":1,"aN":"c3c3c2c7c3c1m1r1a1"}'>Windows</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Store_SoftwareAndApps_ProfessionalSoftware_cont","cT":"Container","id":"c4c3c2c7c3c1m1r1a1","sN":4,"aN":"c3c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_12" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/software?icid=TopNavSoftware" data-m='{"cN":"GlobalNav_Store_SoftwareAndApps_ProfessionalSoftware_nav","id":"n1c4c3c2c7c3c1m1r1a1","sN":1,"aN":"c4c3c2c7c3c1m1r1a1"}'>Professional software</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Store_SoftwareAndApps_WindowsApps_cont","cT":"Container","id":"c5c3c2c7c3c1m1r1a1","sN":5,"aN":"c3c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_13" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/apps/windows?icid=TopNavSoftwareWindowsApps" data-m='{"cN":"GlobalNav_Store_SoftwareAndApps_WindowsApps_nav","id":"n1c5c3c2c7c3c1m1r1a1","sN":1,"aN":"c5c3c2c7c3c1m1r1a1"}'>Windows apps</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Store_SoftwareAndApps_WindowsApps_cont","cT":"Container","id":"c6c3c2c7c3c1m1r1a1","sN":6,"aN":"c3c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_14" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/apps/windows-phone?icid=TopNavSoftwareWindowsPhoneApps" data-m='{"cN":"GlobalNav_Store_SoftwareAndApps_WindowsApps_nav","id":"n1c6c3c2c7c3c1m1r1a1","sN":1,"aN":"c6c3c2c7c3c1m1r1a1"}'>Windows phone apps</a>
+        
+    </li>
+        </ul>
+        
+    </li>   
+    <li class="f-sub-menu js-nav-menu" data-m='{"cN":"Store_GamesandEntertainment_cont","cT":"Container","id":"c4c2c7c3c1m1r1a1","sN":4,"aN":"c2c7c3c1m1r1a1"}'>
+
+        <button id="Games&amp;Entertainment-navigation"  aria-expanded="false" data-m='{"cN":"GlobalNav_Store_GamesandEntertainment_nonnav","id":"nn1c4c2c7c3c1m1r1a1","sN":1,"aN":"c4c2c7c3c1m1r1a1"}'>Games &amp; Entertainment</button>
+        <ul aria-labelledby="Games&amp;Entertainment-navigation" aria-hidden="true" role="none">
+    <li class="js-nav-menu" data-m='{"cN":"GamesandEntertainment_XboxGamesDisc_cont","cT":"Container","id":"c2c4c2c7c3c1m1r1a1","sN":2,"aN":"c4c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_16" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/collections/xboxgames/pc?icid=TopNavXboxGamesDisc" data-m='{"cN":"GlobalNav_GamesandEntertainment_XboxGamesDisc_nav","id":"n1c2c4c2c7c3c1m1r1a1","sN":1,"aN":"c2c4c2c7c3c1m1r1a1"}'>Xbox Games (disc)</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"GamesandEntertainment_XboxGamesDownload_cont","cT":"Container","id":"c3c4c2c7c3c1m1r1a1","sN":3,"aN":"c4c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_17" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/top-paid/games/xbox?icid=TopNavXboxGamesDownload" data-m='{"cN":"GlobalNav_GamesandEntertainment_XboxGamesDownload_nav","id":"n1c3c4c2c7c3c1m1r1a1","sN":1,"aN":"c3c4c2c7c3c1m1r1a1"}'>Xbox Games Download</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Games\u0026Entertainment _PCgames_cont","cT":"Container","id":"c4c4c2c7c3c1m1r1a1","sN":4,"aN":"c4c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_18" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/collections/pcgames/pc?icid=TopNavGamesPCGames" data-m='{"cN":"GlobalNav_Games\u0026Entertainment _PCgames_nav","id":"n1c4c4c2c7c3c1m1r1a1","sN":1,"aN":"c4c4c2c7c3c1m1r1a1"}'>PC games (disc)</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Store_GamesAndEntertainment_WindowsDigitalGames_cont","cT":"Container","id":"c5c4c2c7c3c1m1r1a1","sN":5,"aN":"c4c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_19" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/games/windows?icid=TopNavGamesWindowsGames" data-m='{"cN":"GlobalNav_Store_GamesAndEntertainment_WindowsDigitalGames_nav","id":"n1c5c4c2c7c3c1m1r1a1","sN":1,"aN":"c5c4c2c7c3c1m1r1a1"}'>Windows digital games</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Store_GamesAndEntertainment_WindowsPhoneGames_cont","cT":"Container","id":"c6c4c2c7c3c1m1r1a1","sN":6,"aN":"c4c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_20" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/games/windows-phone?icid=TopNavGamesWindowsPhoneGames" data-m='{"cN":"GlobalNav_Store_GamesAndEntertainment_WindowsPhoneGames_nav","id":"n1c6c4c2c7c3c1m1r1a1","sN":1,"aN":"c6c4c2c7c3c1m1r1a1"}'>Windows phone games</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Games\u0026Entertainment _MoviesandTV_cont","cT":"Container","id":"c7c4c2c7c3c1m1r1a1","sN":7,"aN":"c4c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_21" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/movies-and-tv?icid=TopNavMoviesAndTv" data-m='{"cN":"GlobalNav_Games\u0026Entertainment _MoviesandTV_nav","id":"n1c7c4c2c7c3c1m1r1a1","sN":1,"aN":"c7c4c2c7c3c1m1r1a1"}'>Movies &amp; TV</a>
+        
+    </li>
+        </ul>
+        
+    </li>   
+    <li class="f-sub-menu js-nav-menu" data-m='{"cN":"Store_Deals_cont","cT":"Container","id":"c5c2c7c3c1m1r1a1","sN":5,"aN":"c2c7c3c1m1r1a1"}'>
+
+        <button id="Deals-navigation"  aria-expanded="false" data-m='{"cN":"GlobalNav_Store_Deals_nonnav","id":"nn1c5c2c7c3c1m1r1a1","sN":1,"aN":"c5c2c7c3c1m1r1a1"}'>Deals</button>
+        <ul aria-labelledby="Deals-navigation" aria-hidden="true" role="none">
+    <li class="js-nav-menu" data-m='{"cN":"Store_Deals_Sale_cont","cT":"Container","id":"c2c5c2c7c3c1m1r1a1","sN":2,"aN":"c5c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_23" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/sale?icid=TopNavDealsSale" data-m='{"cN":"GlobalNav_Store_Deals_Sale_nav","id":"n1c2c5c2c7c3c1m1r1a1","sN":1,"aN":"c2c5c2c7c3c1m1r1a1"}'>Sale</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Deals_SurfaceDeals_cont","cT":"Container","id":"c3c5c2c7c3c1m1r1a1","sN":3,"aN":"c5c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_24" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/collections/microsoftsurfacedeals/pc?icid=TopNavSurfaceDeals" data-m='{"cN":"GlobalNav_Deals_SurfaceDeals_nav","id":"n1c3c5c2c7c3c1m1r1a1","sN":1,"aN":"c3c5c2c7c3c1m1r1a1"}'>Microsoft Surface deals</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Deals_PCDeals_cont","cT":"Container","id":"c4c5c2c7c3c1m1r1a1","sN":4,"aN":"c5c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_25" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/collections/pcdeals/pc?icid=TopNavDevicesPCDeals" data-m='{"cN":"GlobalNav_Deals_PCDeals_nav","id":"n1c4c5c2c7c3c1m1r1a1","sN":1,"aN":"c4c5c2c7c3c1m1r1a1"}'>PC deals</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Deals_XboxDeals_cont","cT":"Container","id":"c5c5c2c7c3c1m1r1a1","sN":5,"aN":"c5c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_26" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/collections/xboxdeals/pc?Icid=TopNavXboxDeals" data-m='{"cN":"GlobalNav_Deals_XboxDeals_nav","id":"n1c5c5c2c7c3c1m1r1a1","sN":1,"aN":"c5c5c2c7c3c1m1r1a1"}'>Xbox deals</a>
+        
+    </li>
+        </ul>
+        
+    </li>   
+    <li class="f-sub-menu js-nav-menu" data-m='{"cN":"Store_More_cont","cT":"Container","id":"c6c2c7c3c1m1r1a1","sN":6,"aN":"c2c7c3c1m1r1a1"}'>
+
+        <button id="More-navigation"  aria-expanded="false" data-m='{"cN":"GlobalNav_Store_More_nonnav","id":"nn1c6c2c7c3c1m1r1a1","sN":1,"aN":"c6c2c7c3c1m1r1a1"}'>More</button>
+        <ul aria-labelledby="More-navigation" aria-hidden="true" role="none">
+    <li class="js-nav-menu" data-m='{"cN":"Store_More_Business_cont","cT":"Container","id":"c2c6c2c7c3c1m1r1a1","sN":2,"aN":"c6c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_28" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/business?icid=TopNavBusinessStore" data-m='{"cN":"GlobalNav_Store_More_Business_nav","id":"n1c2c6c2c7c3c1m1r1a1","sN":1,"aN":"c2c6c2c7c3c1m1r1a1"}'>Business</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Store_More_StudentandFaculty Store_cont","cT":"Container","id":"c3c6c2c7c3c1m1r1a1","sN":3,"aN":"c6c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_29" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/student?icid=TopNavEduStore" data-m='{"cN":"GlobalNav_Store_More_StudentandFaculty Store_nav","id":"n1c3c6c2c7c3c1m1r1a1","sN":1,"aN":"c3c6c2c7c3c1m1r1a1"}'>Students &amp; educators</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Store_More_Developer_cont","cT":"Container","id":"c4c6c2c7c3c1m1r1a1","sN":4,"aN":"c6c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_30" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/developer?icid=CNavDeveloper" data-m='{"cN":"GlobalNav_Store_More_Developer_nav","id":"n1c4c6c2c7c3c1m1r1a1","sN":1,"aN":"c4c6c2c7c3c1m1r1a1"}'>Developer</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Store_More_GiftCards_cont","cT":"Container","id":"c5c6c2c7c3c1m1r1a1","sN":5,"aN":"c6c2c7c3c1m1r1a1"}'>
+        <a id="shellmenu_31" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/gift-cards" data-m='{"cN":"GlobalNav_Store_More_GiftCards_nav","id":"n1c5c6c2c7c3c1m1r1a1","sN":1,"aN":"c5c6c2c7c3c1m1r1a1"}'>Gift cards</a>
+        
+    </li>
+        </ul>
+        
+    </li>   
+                                    
+                                    
+                                </ul>
+                            </div>
+                        </li><li>
+                            <div class="c-uhf-menu js-nav-menu">
+
+                                <button id="Products-navigation" aria-expanded="false" aria-haspopup="true" data-m='{"cN":"GlobalNav_Products_nonnav","id":"nn3c7c3c1m1r1a1","sN":3,"aN":"c7c3c1m1r1a1"}' style="white-space:nowrap">Products</button>
+                                <ul class="" aria-labelledby="Products-navigation" aria-hidden="true" data-m='{"cN":"Products_cont","cT":"Container","id":"c4c7c3c1m1r1a1","sN":4,"aN":"c7c3c1m1r1a1"}' role="none">
+    <li class="f-sub-menu js-nav-menu" data-m='{"cN":"Products_SoftwareAndServices_cont","cT":"Container","id":"c1c4c7c3c1m1r1a1","sN":1,"aN":"c4c7c3c1m1r1a1"}'>
+
+        <button id="Software&amp;services-navigation"  aria-expanded="false" data-m='{"cN":"GlobalNav_Products_SoftwareAndServices_nonnav","id":"nn1c1c4c7c3c1m1r1a1","sN":1,"aN":"c1c4c7c3c1m1r1a1"}'>Software &amp; services</button>
+        <ul aria-labelledby="Software&amp;services-navigation" aria-hidden="true" role="none">
+    <li class="js-nav-menu" data-m='{"cN":"Products_SoftwareAndServices_Windows_cont","cT":"Container","id":"c2c1c4c7c3c1m1r1a1","sN":2,"aN":"c1c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_34" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/windows" data-m='{"cN":"GlobalNav_Products_SoftwareAndServices_Windows_nav","id":"n1c2c1c4c7c3c1m1r1a1","sN":1,"aN":"c2c1c4c7c3c1m1r1a1"}'>Windows</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_SoftwareAndServices_Office_cont","cT":"Container","id":"c3c1c4c7c3c1m1r1a1","sN":3,"aN":"c1c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_35" class="js-subm-uhf-nav-link" href="https://products.office.com/en-us/home" data-m='{"cN":"GlobalNav_Products_SoftwareAndServices_Office_nav","id":"n1c3c1c4c7c3c1m1r1a1","sN":1,"aN":"c3c1c4c7c3c1m1r1a1"}'>Office</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_SoftwareAndServices_FreeDownloadsAndSecurity_cont","cT":"Container","id":"c4c1c4c7c3c1m1r1a1","sN":4,"aN":"c1c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_36" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/download/default.aspx" data-m='{"cN":"GlobalNav_Products_SoftwareAndServices_FreeDownloadsAndSecurity_nav","id":"n1c4c1c4c7c3c1m1r1a1","sN":1,"aN":"c4c1c4c7c3c1m1r1a1"}'>Free downloads &amp; security</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_SoftwareAndServices_InternetExplorer_cont","cT":"Container","id":"c5c1c4c7c3c1m1r1a1","sN":5,"aN":"c1c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_37" class="js-subm-uhf-nav-link" href="https://support.microsoft.com/help/17621/internet-explorer-downloads" data-m='{"cN":"GlobalNav_Products_SoftwareAndServices_InternetExplorer_nav","id":"n1c5c1c4c7c3c1m1r1a1","sN":1,"aN":"c5c1c4c7c3c1m1r1a1"}'>Internet Explorer</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_SoftwareAndServices_MicrosoftEdge_cont","cT":"Container","id":"c6c1c4c7c3c1m1r1a1","sN":6,"aN":"c1c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_38" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/windows/microsoft-edge" data-m='{"cN":"GlobalNav_Products_SoftwareAndServices_MicrosoftEdge_nav","id":"n1c6c1c4c7c3c1m1r1a1","sN":1,"aN":"c6c1c4c7c3c1m1r1a1"}'>Microsoft Edge</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_SoftwareAndServices_Skype_cont","cT":"Container","id":"c7c1c4c7c3c1m1r1a1","sN":7,"aN":"c1c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_39" class="js-subm-uhf-nav-link" href="https://www.skype.com/en/" data-m='{"cN":"GlobalNav_Products_SoftwareAndServices_Skype_nav","id":"n1c7c1c4c7c3c1m1r1a1","sN":1,"aN":"c7c1c4c7c3c1m1r1a1"}'>Skype</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_SoftwareAndServices_OneNote_cont","cT":"Container","id":"c8c1c4c7c3c1m1r1a1","sN":8,"aN":"c1c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_40" class="js-subm-uhf-nav-link" href="https://www.onenote.com/" data-m='{"cN":"GlobalNav_Products_SoftwareAndServices_OneNote_nav","id":"n1c8c1c4c7c3c1m1r1a1","sN":1,"aN":"c8c1c4c7c3c1m1r1a1"}'>OneNote</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_SoftwareAndServices_OneDrive_cont","cT":"Container","id":"c9c1c4c7c3c1m1r1a1","sN":9,"aN":"c1c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_41" class="js-subm-uhf-nav-link" href="https://onedrive.live.com/about/en-us/" data-m='{"cN":"GlobalNav_Products_SoftwareAndServices_OneDrive_nav","id":"n1c9c1c4c7c3c1m1r1a1","sN":1,"aN":"c9c1c4c7c3c1m1r1a1"}'>OneDrive</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_SoftwareAndServices_MicrosoftHealth_cont","cT":"Container","id":"c10c1c4c7c3c1m1r1a1","sN":10,"aN":"c1c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_42" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/microsoft-health/en-us" data-m='{"cN":"GlobalNav_Products_SoftwareAndServices_MicrosoftHealth_nav","id":"n1c10c1c4c7c3c1m1r1a1","sN":1,"aN":"c10c1c4c7c3c1m1r1a1"}'>Microsoft Health</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_SoftwareAndServices_MSN_cont","cT":"Container","id":"c11c1c4c7c3c1m1r1a1","sN":11,"aN":"c1c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_43" class="js-subm-uhf-nav-link" href="https://www.msn.com/?ocid=HEA000" data-m='{"cN":"GlobalNav_Products_SoftwareAndServices_MSN_nav","id":"n1c11c1c4c7c3c1m1r1a1","sN":1,"aN":"c11c1c4c7c3c1m1r1a1"}'>MSN</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_SoftwareAndServices_Bing_cont","cT":"Container","id":"c12c1c4c7c3c1m1r1a1","sN":12,"aN":"c1c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_44" class="js-subm-uhf-nav-link" href="https://www.bing.com/" data-m='{"cN":"GlobalNav_Products_SoftwareAndServices_Bing_nav","id":"n1c12c1c4c7c3c1m1r1a1","sN":1,"aN":"c12c1c4c7c3c1m1r1a1"}'>Bing</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_SoftwareAndServices_MicrosoftMoviesandTV_cont","cT":"Container","id":"c13c1c4c7c3c1m1r1a1","sN":13,"aN":"c1c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_45" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/movies-and-tv" data-m='{"cN":"GlobalNav_Products_SoftwareAndServices_MicrosoftMoviesandTV_nav","id":"n1c13c1c4c7c3c1m1r1a1","sN":1,"aN":"c13c1c4c7c3c1m1r1a1"}'>Microsoft Movies &amp; TV</a>
+        
+    </li>
+        </ul>
+        
+    </li>   
+    <li class="f-sub-menu js-nav-menu" data-m='{"cN":"Products_DevicesAndXbox_cont","cT":"Container","id":"c2c4c7c3c1m1r1a1","sN":2,"aN":"c4c7c3c1m1r1a1"}'>
+
+        <button id="Devices&amp;Xbox-navigation"  aria-expanded="false" data-m='{"cN":"GlobalNav_Products_DevicesAndXbox_nonnav","id":"nn1c2c4c7c3c1m1r1a1","sN":1,"aN":"c2c4c7c3c1m1r1a1"}'>Devices &amp; Xbox</button>
+        <ul aria-labelledby="Devices&amp;Xbox-navigation" aria-hidden="true" role="none">
+    <li class="js-nav-menu" data-m='{"cN":"Products_DevicesAndXbox_cont","cT":"Container","id":"c2c2c4c7c3c1m1r1a1","sN":2,"aN":"c2c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_47" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/devices/en-us" data-m='{"cN":"GlobalNav_Products_DevicesAndXbox_nav","id":"n1c2c2c4c7c3c1m1r1a1","sN":1,"aN":"c2c2c4c7c3c1m1r1a1"}'>All Microsoft devices</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_DevicesAndXbox_Surface_cont","cT":"Container","id":"c3c2c4c7c3c1m1r1a1","sN":3,"aN":"c2c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_48" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/surface/en-us" data-m='{"cN":"GlobalNav_Products_DevicesAndXbox_Surface_nav","id":"n1c3c2c4c7c3c1m1r1a1","sN":1,"aN":"c3c2c4c7c3c1m1r1a1"}'>Microsoft Surface</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_DevicesAndXbox_AllPCsAndTablets_cont","cT":"Container","id":"c4c2c4c7c3c1m1r1a1","sN":4,"aN":"c2c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_49" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/pc?icid=TopNavDevicesPC" data-m='{"cN":"GlobalNav_Products_DevicesAndXbox_AllPCsAndTablets_nav","id":"n1c4c2c4c7c3c1m1r1a1","sN":1,"aN":"c4c2c4c7c3c1m1r1a1"}'>All Windows PCs &amp; tablets</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_PCAccessories_cont","cT":"Container","id":"c5c2c4c7c3c1m1r1a1","sN":5,"aN":"c2c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_50" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/accessories/en-us" data-m='{"cN":"GlobalNav_Products_PCAccessories_nav","id":"n1c5c2c4c7c3c1m1r1a1","sN":1,"aN":"c5c2c4c7c3c1m1r1a1"}'>PC accessories</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_DevicesAndXbox_XboxAndGames_cont","cT":"Container","id":"c6c2c4c7c3c1m1r1a1","sN":6,"aN":"c2c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_51" class="js-subm-uhf-nav-link" href="https://www.xbox.com/" data-m='{"cN":"GlobalNav_Products_DevicesAndXbox_XboxAndGames_nav","id":"n1c6c2c4c7c3c1m1r1a1","sN":1,"aN":"c6c2c4c7c3c1m1r1a1"}'>Xbox &amp; games</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_MicrosoftLumia_cont","cT":"Container","id":"c7c2c4c7c3c1m1r1a1","sN":7,"aN":"c2c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_52" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/mobile/" data-m='{"cN":"GlobalNav_Products_MicrosoftLumia_nav","id":"n1c7c2c4c7c3c1m1r1a1","sN":1,"aN":"c7c2c4c7c3c1m1r1a1"}'>Microsoft Lumia</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_DevicesAndXbox_AllWindowsPhones_cont","cT":"Container","id":"c8c2c4c7c3c1m1r1a1","sN":8,"aN":"c2c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_53" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/windows/windows-10-mobile-upgrade" data-m='{"cN":"GlobalNav_Products_DevicesAndXbox_AllWindowsPhones_nav","id":"n1c8c2c4c7c3c1m1r1a1","sN":1,"aN":"c8c2c4c7c3c1m1r1a1"}'>All Windows phones</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_DevicesAndXbox_MicrosoftHololens_cont","cT":"Container","id":"c9c2c4c7c3c1m1r1a1","sN":9,"aN":"c2c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_54" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/microsoft-hololens/en-us" data-m='{"cN":"GlobalNav_Products_DevicesAndXbox_MicrosoftHololens_nav","id":"n1c9c2c4c7c3c1m1r1a1","sN":1,"aN":"c9c2c4c7c3c1m1r1a1"}'>Microsoft HoloLens</a>
+        
+    </li>
+        </ul>
+        
+    </li>   
+    <li class="f-sub-menu js-nav-menu" data-m='{"cN":"Products_ForBusiness_cont","cT":"Container","id":"c3c4c7c3c1m1r1a1","sN":3,"aN":"c4c7c3c1m1r1a1"}'>
+
+        <button id="Forbusiness-navigation"  aria-expanded="false" data-m='{"cN":"GlobalNav_Products_ForBusiness_nonnav","id":"nn1c3c4c7c3c1m1r1a1","sN":1,"aN":"c3c4c7c3c1m1r1a1"}'>For business</button>
+        <ul aria-labelledby="Forbusiness-navigation" aria-hidden="true" role="none">
+    <li class="js-nav-menu" data-m='{"cN":"Products_ForBusiness_CloudPlatform_cont","cT":"Container","id":"c2c3c4c7c3c1m1r1a1","sN":2,"aN":"c3c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_56" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/server-cloud/" data-m='{"cN":"GlobalNav_Products_ForBusiness_CloudPlatform_nav","id":"n1c2c3c4c7c3c1m1r1a1","sN":1,"aN":"c2c3c4c7c3c1m1r1a1"}'>Cloud Platform</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_ForBusiness_MicrosoftAzure_cont","cT":"Container","id":"c3c3c4c7c3c1m1r1a1","sN":3,"aN":"c3c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_57" class="js-subm-uhf-nav-link" href="https://azure.microsoft.com/" data-m='{"cN":"GlobalNav_Products_ForBusiness_MicrosoftAzure_nav","id":"n1c3c3c4c7c3c1m1r1a1","sN":1,"aN":"c3c3c4c7c3c1m1r1a1"}'>Microsoft Azure</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_ForBusiness_MicrosoftDynamics_cont","cT":"Container","id":"c4c3c4c7c3c1m1r1a1","sN":4,"aN":"c3c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_58" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/dynamics365/home" data-m='{"cN":"GlobalNav_Products_ForBusiness_MicrosoftDynamics_nav","id":"n1c4c3c4c7c3c1m1r1a1","sN":1,"aN":"c4c3c4c7c3c1m1r1a1"}'>Microsoft Dynamics 365</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_ForBusiness_WindowsForBusiness_cont","cT":"Container","id":"c5c3c4c7c3c1m1r1a1","sN":5,"aN":"c3c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_59" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/windowsforbusiness " data-m='{"cN":"GlobalNav_Products_ForBusiness_WindowsForBusiness_nav","id":"n1c5c3c4c7c3c1m1r1a1","sN":1,"aN":"c5c3c4c7c3c1m1r1a1"}'>Windows for business</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_ForBusiness_OfficeForBusiness_cont","cT":"Container","id":"c6c3c4c7c3c1m1r1a1","sN":6,"aN":"c3c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_60" class="js-subm-uhf-nav-link" href="https://products.office.com/en-us/business/office" data-m='{"cN":"GlobalNav_Products_ForBusiness_OfficeForBusiness_nav","id":"n1c6c3c4c7c3c1m1r1a1","sN":1,"aN":"c6c3c4c7c3c1m1r1a1"}'>Office for business</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_ForBusiness_SkypeForBusiness_cont","cT":"Container","id":"c7c3c4c7c3c1m1r1a1","sN":7,"aN":"c3c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_61" class="js-subm-uhf-nav-link" href="https://products.office.com/en-us/skype-for-business" data-m='{"cN":"GlobalNav_Products_ForBusiness_SkypeForBusiness_nav","id":"n1c7c3c4c7c3c1m1r1a1","sN":1,"aN":"c7c3c4c7c3c1m1r1a1"}'>Skype for business</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_ForBusiness_SurfaceForBusiness_cont","cT":"Container","id":"c8c3c4c7c3c1m1r1a1","sN":8,"aN":"c3c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_62" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/surface/en-us/business/overview" data-m='{"cN":"GlobalNav_Products_ForBusiness_SurfaceForBusiness_nav","id":"n1c8c3c4c7c3c1m1r1a1","sN":1,"aN":"c8c3c4c7c3c1m1r1a1"}'>Surface for business</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_ForBusiness_EnterpriseSolutions_cont","cT":"Container","id":"c9c3c4c7c3c1m1r1a1","sN":9,"aN":"c3c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_63" class="js-subm-uhf-nav-link" href="https://enterprise.microsoft.com/en-us/" data-m='{"cN":"GlobalNav_Products_ForBusiness_EnterpriseSolutions_nav","id":"n1c9c3c4c7c3c1m1r1a1","sN":1,"aN":"c9c3c4c7c3c1m1r1a1"}'>Enterprise solutions</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_ForBusiness_DataPlatform_cont","cT":"Container","id":"c10c3c4c7c3c1m1r1a1","sN":10,"aN":"c3c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_64" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/sql-server/ " data-m='{"cN":"GlobalNav_Products_ForBusiness_DataPlatform_nav","id":"n1c10c3c4c7c3c1m1r1a1","sN":1,"aN":"c10c3c4c7c3c1m1r1a1"}'>Data platform</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_ForBusiness_FindASolutionsProvider_cont","cT":"Container","id":"c11c3c4c7c3c1m1r1a1","sN":11,"aN":"c3c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_65" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/solution-providers" data-m='{"cN":"GlobalNav_Products_ForBusiness_FindASolutionsProvider_nav","id":"n1c11c3c4c7c3c1m1r1a1","sN":1,"aN":"c11c3c4c7c3c1m1r1a1"}'>Find a solutions provider</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_ForBusiness_VolumeLicensing_cont","cT":"Container","id":"c12c3c4c7c3c1m1r1a1","sN":12,"aN":"c3c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_66" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/licensing/default.aspx" data-m='{"cN":"GlobalNav_Products_ForBusiness_VolumeLicensing_nav","id":"n1c12c3c4c7c3c1m1r1a1","sN":1,"aN":"c12c3c4c7c3c1m1r1a1"}'>Volume licensing</a>
+        
+    </li>
+        </ul>
+        
+    </li>   
+    <li class="f-sub-menu js-nav-menu" data-m='{"cN":"Products_ForDevelopersAndITPros_cont","cT":"Container","id":"c4c4c7c3c1m1r1a1","sN":4,"aN":"c4c7c3c1m1r1a1"}'>
+
+        <button id="Fordevelopers&amp;ITpros-navigation"  aria-expanded="false" data-m='{"cN":"GlobalNav_Products_ForDevelopersAndITPros_nonnav","id":"nn1c4c4c7c3c1m1r1a1","sN":1,"aN":"c4c4c7c3c1m1r1a1"}'>For developers &amp; IT pros</button>
+        <ul aria-labelledby="Fordevelopers&amp;ITpros-navigation" aria-hidden="true" role="none">
+    <li class="js-nav-menu" data-m='{"cN":"Products_DeveloperAndITPro_DevelopWindowsApps_cont","cT":"Container","id":"c2c4c4c7c3c1m1r1a1","sN":2,"aN":"c4c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_68" class="js-subm-uhf-nav-link" href="https://developer.microsoft.com/en-us/windows" data-m='{"cN":"GlobalNav_Products_DeveloperAndITPro_DevelopWindowsApps_nav","id":"n1c2c4c4c7c3c1m1r1a1","sN":1,"aN":"c2c4c4c7c3c1m1r1a1"}'>Develop Windows apps</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_ForDevelopersAndITPros_Azure_cont","cT":"Container","id":"c3c4c4c7c3c1m1r1a1","sN":3,"aN":"c4c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_69" class="js-subm-uhf-nav-link" href="https://azure.microsoft.com/en-us/" data-m='{"cN":"GlobalNav_Products_ForDevelopersAndITPros_Azure_nav","id":"n1c3c4c4c7c3c1m1r1a1","sN":1,"aN":"c3c4c4c7c3c1m1r1a1"}'>Microsoft Azure</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_ForDevelopersAndITPros_cont","cT":"Container","id":"c4c4c4c7c3c1m1r1a1","sN":4,"aN":"c4c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_70" class="js-subm-uhf-nav-link" href="https://msdn.microsoft.com/en-us/" data-m='{"cN":"GlobalNav_Products_ForDevelopersAndITPros_nav","id":"n1c4c4c4c7c3c1m1r1a1","sN":1,"aN":"c4c4c4c7c3c1m1r1a1"}'>MSDN</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_ForDevelopersAndITPros_TechNet_cont","cT":"Container","id":"c5c4c4c7c3c1m1r1a1","sN":5,"aN":"c4c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_71" class="js-subm-uhf-nav-link" href="https://technet.microsoft.com/en-us/" data-m='{"cN":"GlobalNav_Products_ForDevelopersAndITPros_TechNet_nav","id":"n1c5c4c4c7c3c1m1r1a1","sN":1,"aN":"c5c4c4c7c3c1m1r1a1"}'>TechNet</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_ForDevelopersAndITPros_VisualStudio_cont","cT":"Container","id":"c6c4c4c7c3c1m1r1a1","sN":6,"aN":"c4c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_72" class="js-subm-uhf-nav-link" href="https://www.visualstudio.com/" data-m='{"cN":"GlobalNav_Products_ForDevelopersAndITPros_VisualStudio_nav","id":"n1c6c4c4c7c3c1m1r1a1","sN":1,"aN":"c6c4c4c7c3c1m1r1a1"}'>Visual Studio</a>
+        
+    </li>
+        </ul>
+        
+    </li>   
+    <li class="f-sub-menu js-nav-menu" data-m='{"cN":"Products_ForStudentsAndEducators_cont","cT":"Container","id":"c5c4c7c3c1m1r1a1","sN":5,"aN":"c4c7c3c1m1r1a1"}'>
+
+        <button id="Forstudents&amp;educators-navigation"  aria-expanded="false" data-m='{"cN":"GlobalNav_Products_ForStudentsAndEducators_nonnav","id":"nn1c5c4c7c3c1m1r1a1","sN":1,"aN":"c5c4c7c3c1m1r1a1"}'>For students &amp; educators</button>
+        <ul aria-labelledby="Forstudents&amp;educators-navigation" aria-hidden="true" role="none">
+    <li class="js-nav-menu" data-m='{"cN":"Products_ForStudentsAndEducators_OfficeForStudents_cont","cT":"Container","id":"c2c5c4c7c3c1m1r1a1","sN":2,"aN":"c5c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_74" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/education/products/office/default.aspx" data-m='{"cN":"GlobalNav_Products_ForStudentsAndEducators_OfficeForStudents_nav","id":"n1c2c5c4c7c3c1m1r1a1","sN":1,"aN":"c2c5c4c7c3c1m1r1a1"}'>Office for students</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_ForStudentsAndEducators_OneNoteInClassroom_cont","cT":"Container","id":"c3c5c4c7c3c1m1r1a1","sN":3,"aN":"c5c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_75" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/education/products/onenote/default.aspx" data-m='{"cN":"GlobalNav_Products_ForStudentsAndEducators_OneNoteInClassroom_nav","id":"n1c3c5c4c7c3c1m1r1a1","sN":1,"aN":"c3c5c4c7c3c1m1r1a1"}'>OneNote in classroom</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_ForStudentsAndEducators_ShopPCsAndTablets_cont","cT":"Container","id":"c4c5c4c7c3c1m1r1a1","sN":4,"aN":"c5c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_76" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/student" data-m='{"cN":"GlobalNav_Products_ForStudentsAndEducators_ShopPCsAndTablets_nav","id":"n1c4c5c4c7c3c1m1r1a1","sN":1,"aN":"c4c5c4c7c3c1m1r1a1"}'>Shop PCs &amp; tablets perfect for students</a>
+        
+    </li>
+    <li class="js-nav-menu" data-m='{"cN":"Products_ForStudentsAndEducators_MicrosoftInEducation_cont","cT":"Container","id":"c5c5c4c7c3c1m1r1a1","sN":5,"aN":"c5c4c7c3c1m1r1a1"}'>
+        <a id="shellmenu_77" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/education" data-m='{"cN":"GlobalNav_Products_ForStudentsAndEducators_MicrosoftInEducation_nav","id":"n1c5c5c4c7c3c1m1r1a1","sN":1,"aN":"c5c5c4c7c3c1m1r1a1"}'>Microsoft in Education</a>
+        
+    </li>
+        </ul>
+        
+    </li>   
+                                    
+                                    
+                                </ul>
+                            </div>
+                        </li><li>
+                        <a id="l1_support" class="c-uhf-nav-link" href="https://support.microsoft.com/en-us" data-m='{"cN":"GlobalNav_Support_nav","id":"n5c7c3c1m1r1a1","sN":5,"aN":"c7c3c1m1r1a1"}'>Support</a>
+                    </li>            </ul>
+            
+        </nav>
+
+            
+            <button class="c-action-trigger c-glyph glyph-chevron-right js-secondary-paddle" data-m='{"cN":"Next_nonnav","id":"nn8c3c1m1r1a1","sN":8,"aN":"c3c1m1r1a1"}' aria-label="Show next" tabindex="-1"></button>
+
+                <div class="c-uhfh-actions" data-m='{"cN":"Header actions_cont","cT":"Container","id":"c9c3c1m1r1a1","sN":9,"aN":"c3c1m1r1a1"}'>
+                            <form class="c-search" autocomplete="off" id="searchForm" name="searchForm" role="search" action="https://blogs.microsoft.com/iot/" method="GET" data-seAutoSuggest='{"queryParams":{"market":"en-us","clientId":"7F27B536-CF6B-4C65-8638-A0F8CBDFCA65","sources":"Microsoft-Terms,Iris-Products,DCatAll-Products","counts":"5,1,5"},"familyNames":{"Apps":"App","Books":"Book","Bundles":"Bundle","Devices":"Device","Fees":"Fee","Games":"Game","MusicAlbums":"Album","MusicTracks":"Song","MusicVideos":"Video","MusicArtists":"Artist","OperatingSystem":"Operating System","Software":"Software","Movies":"Movie","TV":"TV","CSV":"Gift Card","VideoActor":"Actor"}}' data-seautosuggestapi="https://www.microsoft.com/services/api/v3/suggest" data-m='{"cN":"GlobalNav_Search_cont","cT":"Container","id":"c1c9c3c1m1r1a1","sN":1,"aN":"c9c3c1m1r1a1"}' aria-expanded="false">
+            <input data-m='{"cN":"cli_shellHeaderSearchInput","pid":"s","id":"nn1c1c9c3c1m1r1a1","sN":1,"aN":"c1c9c3c1m1r1a1"}' id="cli_shellHeaderSearchInput" aria-label="" role="combobox" aria-autocomplete="list" aria-controls="universal-header-search-auto-suggest-transparent" aria-owns="universal-header-search-auto-suggest-ul" type="search" name="s" placeholder="" data-m='{"cN":"SearchBox_nav","id":"n2c1c9c3c1m1r1a1","sN":2,"aN":"c1c9c3c1m1r1a1"}'  />
+            <button id="search" aria-label="Search" class="c-glyph" data-m='{"cN":"Search_nav","id":"n3c1c9c3c1m1r1a1","sN":3,"aN":"c1c9c3c1m1r1a1"}' data-bi-dnt="true" data-bi-mto="true"></button>
+            <div class="m-auto-suggest" id="universal-header-search-auto-suggest-transparent" role="group">
+                <ul class="c-menu" id="universal-header-search-auto-suggest-ul" aria-hidden="true" data-bi-dnt="true" data-bi-mto="true" data-js-auto-suggest-position="default" role="listbox" data-tel="jsll" data-m='{"cN":"search suggestions_cont","cT":"Container","id":"c4c1c9c3c1m1r1a1","sN":4,"aN":"c1c9c3c1m1r1a1"}'></ul>
+            </div>
+            
+        </form>
+
+                            <a id="uhf-shopping-cart" aria-label="0 items in shopping cart"
+           class="c-action-trigger c-glyph glyph-shopping-cart"
+           href="https://www.microsoft.com/en-us/store/buy"
+           data-m='{"cN":"GlobalNav_Cart_nav","bhvr":82,"id":"n2c9c3c1m1r1a1","sN":2,"aN":"c9c3c1m1r1a1"}'>
+            <span class="shopping-cart-amount x-hidden" aria-hidden="true">0</span>
+        </a>
+            <iframe id="shell-cart-count" data-src="//www.microsoft.com/store/buy/cartcount" style="display: none"></iframe>
+
+                    
+                            <div id="meControl" class="c-me" data-signinsettings='{"containerId":"meControl","enabled":true,"headerHeight":48,"debug":false,"extensibleLinks":[],"userData":{"idp":"msa","firstName":"","lastName":"","memberName":"","cid":"","authenticatedState":"3"},"rpData":{"preferredIdp":"msa","msaInfo":{"signInUrl":"","signOutUrl":"","meUrl":"https://login.live.com/me.srf?wa=wsignin1.0"},"aadInfo":{"signOutUrl":"","appId":null,"siteUrl":null,"blockMsaFed":true}}}' data-m='{"cN":"GlobalNav_Account_cont","cT":"Container","id":"c3c9c3c1m1r1a1","sN":3,"aN":"c9c3c1m1r1a1"}'>
+            <div class="msame_Header">
+                <div class="msame_Header_name">Sign in</div>
+            </div>
+            
+        </div>
+
+                    
+                </div>
+        </div>
+        
+        
+    </div>
+            <div class="theme-dark brand-neutral js-cat-head" itemprop="brand" itemscope="itemscope" itemtype="http://schema.org/Brand" data-m='{"cN":"UHF category nav_cont","cT":"Container","id":"c4c1m1r1a1","sN":4,"aN":"c1m1r1a1"}'>
+
+<div>
+        <a id="uhfCatLogo" class="c-logo" href="http://blogs.microsoft.com/iot" aria-label="Microsoft Internet of Things " itemprop="url" data-m='{"cN":"Microsoft Internet of Things_nav","id":"n1c4c1m1r1a1","sN":1,"aN":"c4c1m1r1a1"}'>
+                <span>Microsoft Internet of Things </span>
+        </a>
+    
+    <button class="c-action-trigger c-glyph glyph-chevron-left js-primary-paddle" aria-label="Scroll left" title="Scroll left" data-m='{"cN":"Previous_nonnav","id":"nn2c4c1m1r1a1","sN":2,"aN":"c4c1m1r1a1"}' tabindex="-1"></button>
+    
+    <button class="c-action-trigger c-glyph glyph-chevron-right js-secondary-paddle" aria-label="Scroll right" title="Scroll right" data-m='{"cN":"Next_nonnav","id":"nn3c4c1m1r1a1","sN":3,"aN":"c4c1m1r1a1"}' tabindex="-1"></button>
+            <nav id="uhf-c-nav" role="navigation" aria-label="microsoft internet of things " class="js-paddle-items">
+
+                        <a id="shellmenu_79" class="c-uhf-nav-link" href="http://blogs.microsoft.com/iot/about" data-m='{"cN":"CatNav_MSBlogsIOT-About_nav","id":"n4c4c1m1r1a1","sN":4,"aN":"c4c1m1r1a1"}'>About</a>
+                    </nav>
+
+</div>
+
+
+            
+        </div>
+
+    
+</header>
+
+
+    </div>
+            </div>
+
+    </section>
+	
+	
+	
+	<div id="content" class="site-content" ms.pgarea="body">
+
+	<section id="primary" class="content-area context-mnc-post">
+		<main id="main" class="site-main" role="main" data-grid="container pad-6x stack-2" tabindex="-1">
+            <div data-grid="col-8" ms.cmpgrp="post content">
+				
+<article id="post-6373" class="m-blog-post post-6373 post type-post status-publish format-standard has-post-thumbnail hentry category-microsoft-iot" ms.cmpnm="post content">
+	<header class="entry-header m-blog-content">
+		<h1 class="entry-title c-heading-3">Simplifying IoT</h1>			<div>
+				<p class="c-meta-text">
+					Mar 17, 2015					&nbsp;&nbsp;|&nbsp;&nbsp;					<a href="https://blogs.microsoft.com/iot/author/richreynolds/" ms.title="Rich Reynolds" class="c-hyperlink u-underline" aria-label="See more written by Rich Reynolds">
+	Rich Reynolds - Chief Strategy &amp; Marketing Officer</a>
+				</p>
+			</div><!-- .entry-meta -->
+		
+<div class="c-social f-horizontal" itemscope itemtype="http://schema.org/Organization" ms.cmpnm="social">
+	<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblogs.microsoft.com%2Fiot%2F2015%2F03%2F17%2Fsimplifying-iot%2F" itemprop="sameAs" target="_blank" ms.title="Facebook" aria-label="Share on Facebook"><img src="https://blogs.microsoft.com/iot/wp-content/themes/ms-blogs/images/social//facebook.png" alt="Facebook"></a><a href="https://twitter.com/intent/tweet?text=Simplifying+IoT&#038;url=https%3A%2F%2Fblogs.microsoft.com%2Fiot%2F2015%2F03%2F17%2Fsimplifying-iot%2F" itemprop="sameAs" target="_blank" ms.title="Twitter" aria-label="Share on Twitter"><img src="https://blogs.microsoft.com/iot/wp-content/themes/ms-blogs/images/social//twitter.png" alt="Twitter"></a><a href="https://www.linkedin.com/shareArticle?mini=true&#038;url=https%3A%2F%2Fblogs.microsoft.com%2Fiot%2F2015%2F03%2F17%2Fsimplifying-iot%2F&#038;title=Simplifying+IoT&#038;summary=Over+the+past+year%2C+we%E2%80%99ve+talked+a+lot+about+the+Internet+of+Things%C2%A0%28IoT%29.+But+what+exactly+is+it%3F+And+what+does+it+mean+for+businesses%3F+This+brief+explainer+breaks+it+all+down+and+simply+describes+how+IoT+is+changing+the+business+world+and+providing%C2%A0decision+makers+with+incredible+insights+to+help+them+run+their+business+smarter...&#038;source=" itemprop="sameAs" target="_blank" ms.title="LinkedIn" aria-label="Share on LinkedIn"><img src="https://blogs.microsoft.com/iot/wp-content/themes/ms-blogs/images/social//linkedin.png" alt="LinkedIn"></a></div>
+	</header><!-- .entry-header -->
+
+	
+	<div class="entry-content m-blog-content">
+		<p>Over the past year, we’ve talked a lot about the <a href="http://www.microsoft.com/en-us/server-cloud/internet-of-things.aspx">Internet of Things</a> (IoT). But what exactly is it? And what does it mean for businesses? This brief explainer breaks it all down and simply describes how IoT is changing the business world and providing decision makers with incredible insights to help them run their business smarter and increase revenue. <a href="http://www.microsoft.com/india/casestudies/windows-xp-embedded/kuka-systems-group/industrial-automation-pioneer-automates-car-body-production-with-intelligent-system/710000004143">KUKA Robotics</a>, <a href="http://www.microsoft.com/en-us/server-cloud/customer-stories/royal-caribbean.aspx">Royal Caribbean Cruises</a>, and <a href="http://www.microsoft.com/en-us/server-cloud/customer-stories/rockwell-automation.aspx">Rockwell Automation</a> provide real examples of how the Internet of Things has transformed their businesses.</p>
+<p><iframe class="newsbound-embedded" src="//content.newsbound.com/public/microsoft/microsoft_iot/index.html?embed=true" name="nb-stack" width="1280" height="420" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+	</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+            </div>
+	        <div data-grid="col-4">
+                
+<aside id="secondary" class="widget-area" role="complementary" data-grid="col-12" ms.cmpgrp="related" ms.cmpnm="related">
+			<h2 class="c-heading-5 ms-related-posts">Related Stories</h2>
+						<article id="post-12693" class="m-preview" data-grid="col-12">
+					<div class="m-preview-content">
+						<p class="c-meta-text">
+							Mar 10, 2016							&nbsp;&nbsp;|&nbsp;&nbsp;
+							<a
+								href="https://blogs.microsoft.com/iot/author/barbedson/"
+								ms.title="Barb Edson"
+								class="c-hyperlink u-underline"
+								aria-label="Read more stories written by Barb Edson">
+								Barb Edson							</a>
+						</p>
+						<a
+							href="https://blogs.microsoft.com/iot/2016/03/10/microsoft-envision-conference-brings-iot-to-new-orleans-on-april-4/"
+							rel="bookmark" class="f-post-link"
+							ms.title="Microsoft Envision conference brings IoT to New Orleans on April 4"
+							aria-label="Read more about Microsoft Envision conference brings IoT to New Orleans on April 4">
+							<h3 class="c-heading-6 m-chevron">Microsoft Envision conference brings IoT to New Orleans on April 4</h3>
+						</a>
+					</div>
+				</article>
+							<article id="post-13276" class="m-preview" data-grid="col-12">
+					<div class="m-preview-content">
+						<p class="c-meta-text">
+							Apr 28, 2016							&nbsp;&nbsp;|&nbsp;&nbsp;
+							<a
+								href="https://blogs.microsoft.com/iot/author/iotindustryteam/"
+								ms.title="Microsoft IoT"
+								class="c-hyperlink u-underline"
+								aria-label="Read more stories written by Microsoft IoT">
+								Microsoft IoT							</a>
+						</p>
+						<a
+							href="https://blogs.microsoft.com/iot/2016/04/28/iot-slam-16-virtual-conference-shows-transformative-powers-of-iot/"
+							rel="bookmark" class="f-post-link"
+							ms.title="IoT Slam ’16 virtual conference shows transformative powers of IoT"
+							aria-label="Read more about IoT Slam ’16 virtual conference shows transformative powers of IoT">
+							<h3 class="c-heading-6 m-chevron">IoT Slam ’16 virtual conference shows transformative powers of IoT</h3>
+						</a>
+					</div>
+				</article>
+							<article id="post-13882" class="m-preview" data-grid="col-12">
+					<div class="m-preview-content">
+						<p class="c-meta-text">
+							Jul 19, 2016							&nbsp;&nbsp;|&nbsp;&nbsp;
+							<a
+								href="https://blogs.microsoft.com/iot/author/jerrylee/"
+								ms.title="Jerry Lee"
+								class="c-hyperlink u-underline"
+								aria-label="Read more stories written by Jerry Lee">
+								Jerry Lee							</a>
+						</p>
+						<a
+							href="https://blogs.microsoft.com/iot/2016/07/19/overcoming-the-three-most-common-challenges-to-iot-adoption/"
+							rel="bookmark" class="f-post-link"
+							ms.title="Overcoming the three most common challenges to IoT adoption"
+							aria-label="Read more about Overcoming the three most common challenges to IoT adoption">
+							<h3 class="c-heading-6 m-chevron">Overcoming the three most common challenges to IoT adoption</h3>
+						</a>
+					</div>
+				</article>
+							<article id="post-21828" class="m-preview" data-grid="col-12">
+					<div class="m-preview-content">
+						<p class="c-meta-text">
+							Feb 15, 2017							&nbsp;&nbsp;|&nbsp;&nbsp;
+							<a
+								href="https://blogs.microsoft.com/iot/author/iotindustryteam/"
+								ms.title="Microsoft IoT"
+								class="c-hyperlink u-underline"
+								aria-label="Read more stories written by Microsoft IoT">
+								Microsoft IoT							</a>
+						</p>
+						<a
+							href="https://blogs.microsoft.com/iot/2017/02/15/see-the-internet-of-things-in-action-with-microsoft/"
+							rel="bookmark" class="f-post-link"
+							ms.title="See the Internet of Things in Action With Microsoft"
+							aria-label="Read more about See the Internet of Things in Action With Microsoft">
+							<h3 class="c-heading-6 m-chevron">See the Internet of Things in Action With Microsoft</h3>
+						</a>
+					</div>
+				</article>
+			
+	<section id="wpcom_social_media_icons_widget-3" class="widget widget_wpcom_social_media_icons_widget" data-grid="col-12"><h3 class="widget-title c-heading-5" data-grid="col-12">Follow us</h3><div class="m-preview" data-grid="col-12"><div class="m-preview-content"><ul><li><a href="https://twitter.com/MicrosoftIoT/" class="genericon genericon-twitter" target="_blank"><span class="screen-reader-text">View MicrosoftIoT&#8217;s profile on Twitter</span></a></li><li><a title="RSS Feed" href="https://blogs.microsoft.com/iot/feed/" class="genericon genericon-feed" target="_blank"><span class="screen-reader-text">RSS Feed</span></a></li></ul></div></div></section></aside><!-- #secondary -->
+            </div>
+    	</main><!-- #main -->
+	</section><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+	
+		<section id="footerArea"  data-m='{"cN":"footerArea","cT":"Area_coreuiArea","id":"a2Body","sN":2,"aN":"Body"}'>
+                    <div id="footerRegion"       data-region-key="footerregion" data-m='{"cN":"footerRegion","cT":"Region_coreui-region","id":"r1a2","sN":1,"aN":"a2"}' >
+
+    <div  id="footerUniversalFooter" data-m='{"cN":"footerUniversalFooter","cT":"Module_coreui-universalfooter","id":"m1r1a2","sN":1,"aN":"r1a2"}'  data-module-id="Category|footerRegion|footerRegion|footerUniversalFooter|coreui-universalfooter">
+        
+
+<footer id="uhf-footer" role="contentinfo" class="c-uhff context-uhf"  data-uhf-mscc-rq="false"  data-footer-footprint="en-us/MSBlogs/MSBlogsFooter" data-m='{"cN":"Uhf footer_cont","cT":"Container","id":"c1m1r1a2","sN":1,"aN":"m1r1a2"}' >
+        <nav class="c-uhff-nav" role="navigation" aria-label="Footer" data-m='{"cN":"Footer nav_cont","cT":"Container","id":"c1c1m1r1a2","sN":1,"aN":"c1m1r1a2"}'>
+            
+                <div class="c-uhff-nav-row">
+                        <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn1_cont","cT":"Container","id":"c1c1c1m1r1a2","sN":1,"aN":"c1c1m1r1a2"}'>
+                            <h4 class="c-heading-4">What&#39;s new</h4>
+                            <ul class="c-list f-bare">
+                                        <li>
+                                            <a class="c-uhff-link" href="https://www.microsoft.com/en-us/surface/devices/surface-book-2/overview" data-m='{"cN":"Footer_WhatsNew_SurfaceBook2_nav","id":"n1c1c1c1m1r1a2","sN":1,"aN":"c1c1c1m1r1a2"}'>Surface Book 2</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://www.microsoft.com/en-us/surface/devices/surface-pro/overview" data-m='{"cN":"Footer_WhatsNew_NewSurfacePro_nav","id":"n2c1c1c1m1r1a2","sN":2,"aN":"c1c1c1m1r1a2"}'>Surface Pro</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://www.xbox.com/en-us/xbox-one-x" data-m='{"cN":"Footer_WhatsNew_XboxOneX_nav","id":"n3c1c1c1m1r1a2","sN":3,"aN":"c1c1c1m1r1a2"}'>Xbox One X</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://www.xbox.com/en-us/xbox-one-s?xr=shellnav" data-m='{"cN":"Footer_WhatsNew_XboxOneS_nav","id":"n4c1c1c1m1r1a2","sN":4,"aN":"c1c1c1m1r1a2"}'>Xbox One S</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://www.microsoft.com/en-us/store/b/virtualreality" data-m='{"cN":"Footer_WhatsNew_VRandMixedReality_nav","id":"n5c1c1c1m1r1a2","sN":5,"aN":"c1c1c1m1r1a2"}'>VR &amp; mixed reality</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://www.microsoft.com/en-us/windows/windows-10-apps" data-m='{"cN":"Footer_WhatsNew_Windows_10_apps_nav","id":"n6c1c1c1m1r1a2","sN":6,"aN":"c1c1c1m1r1a2"}'>Windows 10 apps</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://store.office.com/en-us/appshome.aspx?" data-m='{"cN":"Footer_WhatsNew_OfficeApps_nav","id":"n7c1c1c1m1r1a2","sN":7,"aN":"c1c1c1m1r1a2"}'>Office apps</a>
+                                        </li>
+
+                            </ul>
+                            
+                        </div>
+                        <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn2_cont","cT":"Container","id":"c2c1c1m1r1a2","sN":2,"aN":"c1c1m1r1a2"}'>
+                            <h4 class="c-heading-4">Store &amp; Support</h4>
+                            <ul class="c-list f-bare">
+                                        <li>
+                                            <a class="c-uhff-link" href="https://account.microsoft.com/" data-m='{"cN":"Footer_StoreandSupport_AccountProfile_nav","id":"n1c2c1c1m1r1a2","sN":1,"aN":"c2c1c1m1r1a2"}'>Account profile</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://www.microsoft.com/en-us/download" data-m='{"cN":"Footer_StoreandSupport_DownloadCenter_nav","id":"n2c2c1c1m1r1a2","sN":2,"aN":"c2c1c1m1r1a2"}'>Download Center</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://go.microsoft.com/fwlink/p/?LinkID=824761&amp;clcid=0x409" data-m='{"cN":"Footer_StoreandSupport_SalesAndSupport_nav","id":"n3c2c1c1m1r1a2","sN":3,"aN":"c2c1c1m1r1a2"}'>Sales &amp; support</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://go.microsoft.com/fwlink/p/?LinkID=824764&amp;clcid=0x409" data-m='{"cN":"MicrosoftStore_ExtendedHolidayReturns_nav","id":"n4c2c1c1m1r1a2","sN":4,"aN":"c2c1c1m1r1a2"}'>Returns</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://account.microsoft.com/orders" data-m='{"cN":"Footer_StoreandSupport_OrderTracking_nav","id":"n5c2c1c1m1r1a2","sN":5,"aN":"c2c1c1m1r1a2"}'>Order tracking</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://www.microsoft.com/en-us/store/locations/find-a-store" data-m='{"cN":"Footer_StoreandSupport_StoreLocations_nav","id":"n6c2c1c1m1r1a2","sN":6,"aN":"c2c1c1m1r1a2"}'>Store locations</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://support.microsoft.com/en-us" data-m='{"cN":"Footer_StoreandSupport_Support_nav","id":"n7c2c1c1m1r1a2","sN":7,"aN":"c2c1c1m1r1a2"}'>Support</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://www.microsoft.com/en-us/store/b/buy-online-pick-up-in-store?icid=uhf_footer_bopuis" data-m='{"cN":"StoreandSupport_BuyOnlinePickUpInStore_nav","id":"n8c2c1c1m1r1a2","sN":8,"aN":"c2c1c1m1r1a2"}'>Buy online, pick up in store</a>
+                                        </li>
+
+                            </ul>
+                            
+                        </div>
+                        <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn3_cont","cT":"Container","id":"c3c1c1m1r1a2","sN":3,"aN":"c1c1m1r1a2"}'>
+                            <h4 class="c-heading-4">Education</h4>
+                            <ul class="c-list f-bare">
+                                        <li>
+                                            <a class="c-uhff-link" href="https://www.microsoft.com/en-us/education" data-m='{"cN":"Footer_Education_MicrosoftInEducation_nav","id":"n1c3c1c1m1r1a2","sN":1,"aN":"c3c1c1m1r1a2"}'>Microsoft in education</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://www.microsoft.com/en-us/education/products/office/default.aspx" data-m='{"cN":"Footer_Education_OfficeForStudents_nav","id":"n2c3c1c1m1r1a2","sN":2,"aN":"c3c1c1m1r1a2"}'>Office for students</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://products.office.com/en-us/academic/compare-office-365-education-plans" data-m='{"cN":"Footer_Education_Office365ForSchools_nav","id":"n3c3c1c1m1r1a2","sN":3,"aN":"c3c1c1m1r1a2"}'>Office 365 for schools</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://www.microsoft.com/en-us/store/b/student" data-m='{"cN":"Footer_Education_DealsForStudentsandEducators_nav","id":"n4c3c1c1m1r1a2","sN":4,"aN":"c3c1c1m1r1a2"}'>Deals for students &amp; educators </a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://azure.microsoft.com/en-us/community/education/" data-m='{"cN":"Footer_MicrosoftAzureInEducation_nav","id":"n5c3c1c1m1r1a2","sN":5,"aN":"c3c1c1m1r1a2"}'>Microsoft Azure in education</a>
+                                        </li>
+
+                            </ul>
+                            
+                        </div>
+                </div>
+                <div class="c-uhff-nav-row">
+                        <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn4_cont","cT":"Container","id":"c4c1c1m1r1a2","sN":4,"aN":"c1c1m1r1a2"}'>
+                            <h4 class="c-heading-4">Enterprise</h4>
+                            <ul class="c-list f-bare">
+                                        <li>
+                                            <a class="c-uhff-link" href="https://azure.microsoft.com/" data-m='{"cN":"Footer_Enterprise_MicrosoftAzure_nav","id":"n1c4c1c1m1r1a2","sN":1,"aN":"c4c1c1m1r1a2"}'>Microsoft Azure </a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://enterprise.microsoft.com/en-us/" data-m='{"cN":"Footer_Enterprise_Enterprise_nav","id":"n2c4c1c1m1r1a2","sN":2,"aN":"c4c1c1m1r1a2"}'>Enterprise</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://www.microsoft.com/en-us/sql-server/" data-m='{"cN":"Footer_Enterprise_DataPlatform_nav","id":"n3c4c1c1m1r1a2","sN":3,"aN":"c4c1c1m1r1a2"}'>Data platform</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://www.microsoft.com/en-us/solution-providers" data-m='{"cN":"Footer_Enterprise_FindASolutionsProvider_nav","id":"n4c4c1c1m1r1a2","sN":4,"aN":"c4c1c1m1r1a2"}'>Find a solutions provider</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://partner.microsoft.com/en-us/" data-m='{"cN":"Footer_Enterprise_MicrosoftPartnerResources_nav","id":"n5c4c1c1m1r1a2","sN":5,"aN":"c4c1c1m1r1a2"}'>Microsoft partner resources </a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://go.microsoft.com/fwlink/?LinkID=808093" data-m='{"cN":"Footer_Enterprise_MicrosoftAppSource_nav","id":"n6c4c1c1m1r1a2","sN":6,"aN":"c4c1c1m1r1a2"}'>Microsoft AppSource </a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://enterprise.microsoft.com/en-us/industries/discrete-manufacturing/" data-m='{"cN":"Footer_Enterprise_ManufacturingAndResources_nav","id":"n7c4c1c1m1r1a2","sN":7,"aN":"c4c1c1m1r1a2"}'>Manufacturing &amp; resources</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://enterprise.microsoft.com/en-us" data-m='{"cN":"Footer_Enterprise_FinanciaServices_nav","id":"n8c4c1c1m1r1a2","sN":8,"aN":"c4c1c1m1r1a2"}'>Financial services</a>
+                                        </li>
+
+                            </ul>
+                            
+                        </div>
+                        <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn5_cont","cT":"Container","id":"c5c1c1m1r1a2","sN":5,"aN":"c1c1m1r1a2"}'>
+                            <h4 class="c-heading-4">Developer</h4>
+                            <ul class="c-list f-bare">
+                                        <li>
+                                            <a class="c-uhff-link" href="https://www.visualstudio.com/" data-m='{"cN":"Footer_Developer_MicrosoftVisualStudio_nav","id":"n1c5c1c1m1r1a2","sN":1,"aN":"c5c1c1m1r1a2"}'>Microsoft Visual Studio</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://developer.microsoft.com/en-us/windows" data-m='{"cN":"Footer_Developer_WindowsDevCenter_nav","id":"n2c5c1c1m1r1a2","sN":2,"aN":"c5c1c1m1r1a2"}'>Windows Dev Center</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://msdn.microsoft.com/en-us" data-m='{"cN":"Footer_Developer_MicrosoftDeveloperNetwork_nav","id":"n3c5c1c1m1r1a2","sN":3,"aN":"c5c1c1m1r1a2"}'>Developer Network</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://technet.microsoft.com/en-us" data-m='{"cN":"Footer_Developer_TechNet_nav","id":"n4c5c1c1m1r1a2","sN":4,"aN":"c5c1c1m1r1a2"}'>TechNet</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://mva.microsoft.com/" data-m='{"cN":"Footer_Developer_MicrosoftVirtualAcademy_nav","id":"n5c5c1c1m1r1a2","sN":5,"aN":"c5c1c1m1r1a2"}'>Microsoft Virtual Academy</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://developer.microsoft.com/en-us/store/register" data-m='{"cN":"Footer_Developer_MicrosoftDeveloperProgram_nav","id":"n6c5c1c1m1r1a2","sN":6,"aN":"c5c1c1m1r1a2"}'>Microsoft developer program</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://channel9.msdn.com/" data-m='{"cN":"Footer_Developer_Channel9_nav","id":"n7c5c1c1m1r1a2","sN":7,"aN":"c5c1c1m1r1a2"}'>Channel 9</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://developer.microsoft.com/en-us/office" data-m='{"cN":"Footer_Developer_OfficeDevCenter_nav","id":"n8c5c1c1m1r1a2","sN":8,"aN":"c5c1c1m1r1a2"}'>Office Dev Center</a>
+                                        </li>
+
+                            </ul>
+                            
+                        </div>
+                        <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn6_cont","cT":"Container","id":"c6c1c1m1r1a2","sN":6,"aN":"c1c1m1r1a2"}'>
+                            <h4 class="c-heading-4">Company</h4>
+                            <ul class="c-list f-bare">
+                                        <li>
+                                            <a class="c-uhff-link" href="https://careers.microsoft.com/" data-m='{"cN":"Footer_Company_Careers_nav","id":"n1c6c1c1m1r1a2","sN":1,"aN":"c6c1c1m1r1a2"}'>Careers</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://www.microsoft.com/en-us/about" data-m='{"cN":"Footer_Company_AboutMicrosoft_nav","id":"n2c6c1c1m1r1a2","sN":2,"aN":"c6c1c1m1r1a2"}'>About Microsoft</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://news.microsoft.com/" data-m='{"cN":"Footer_Company_CompanyNews_nav","id":"n3c6c1c1m1r1a2","sN":3,"aN":"c6c1c1m1r1a2"}'>Company news</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://privacy.microsoft.com/en-us" data-m='{"cN":"Footer_Company_PrivacyAtMicrosoft_nav","id":"n4c6c1c1m1r1a2","sN":4,"aN":"c6c1c1m1r1a2"}'>Privacy at Microsoft</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://www.microsoft.com/investor/default.aspx" data-m='{"cN":"Footer_Company_Investors_nav","id":"n5c6c1c1m1r1a2","sN":5,"aN":"c6c1c1m1r1a2"}'>Investors</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://www.microsoft.com/en-us/diversity/" data-m='{"cN":"Footer_Company_DiversityAndInclusion_nav","id":"n6c6c1c1m1r1a2","sN":6,"aN":"c6c1c1m1r1a2"}'>Diversity and inclusion</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://www.microsoft.com/en-us/accessibility/home" data-m='{"cN":"Footer_Company_Accessibility_nav","id":"n7c6c1c1m1r1a2","sN":7,"aN":"c6c1c1m1r1a2"}'>Accessibility</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-uhff-link" href="https://www.microsoft.com/en-us/security/default.aspx" data-m='{"cN":"Footer_Company_Security_nav","id":"n8c6c1c1m1r1a2","sN":8,"aN":"c6c1c1m1r1a2"}'>Security</a>
+                                        </li>
+
+                            </ul>
+                            
+                        </div>
+                </div>
+        </nav>
+    <div class="c-uhff-base">
+                <a id="locale-picker-link" class="c-uhff-link c-uhff-lang-selector c-glyph glyph-world" href="http://www.microsoft.com/en-us/locale.aspx" data-m='{"cN":"locale_picker(US)_nav","id":"n7c1c1m1r1a2","sN":7,"aN":"c1c1m1r1a2"}'>English (United States)</a>
+
+        <ul role="contentinfo" aria-label="Microsoft corporate links" class="c-list f-bare" data-m='{"cN":"Corp links_cont","cT":"Container","id":"c8c1c1m1r1a2","sN":8,"aN":"c1c1m1r1a2"}'>
+                            <li>
+                    <a class="c-uhff-link" href="http://go.microsoft.com/?linkid=2028325" data-mscc-ic="false" data-m='{"cN":"Footer_ContactUs_nav","id":"n1c8c1c1m1r1a2","sN":1,"aN":"c8c1c1m1r1a2"}'>Contact us</a>
+                </li>
+                <li>
+                    <a class="c-uhff-link" href="http://go.microsoft.com/fwlink/?LinkId=248681" data-mscc-ic="false" data-m='{"cN":"Footer_PrivacyandCookies_nav","id":"n2c8c1c1m1r1a2","sN":2,"aN":"c8c1c1m1r1a2"}'>Privacy and cookies </a>
+                </li>
+                <li>
+                    <a class="c-uhff-link" href="http://go.microsoft.com/fwlink/?LinkID=530144" data-mscc-ic="false" data-m='{"cN":"Footer_TermsOfUse_nav","id":"n3c8c1c1m1r1a2","sN":3,"aN":"c8c1c1m1r1a2"}'>Terms of use</a>
+                </li>
+                <li>
+                    <a class="c-uhff-link" href="https://www.microsoft.com/trademarks" data-mscc-ic="false" data-m='{"cN":"Footer_Trademarks_nav","id":"n4c8c1c1m1r1a2","sN":4,"aN":"c8c1c1m1r1a2"}'>Trademarks</a>
+                </li>
+                <li>
+                    <a class="c-uhff-link" href="https://choice.microsoft.com/" data-mscc-ic="false" data-m='{"cN":"Footer_AboutourAds_nav","id":"n5c8c1c1m1r1a2","sN":5,"aN":"c8c1c1m1r1a2"}'>About our ads</a>
+                </li>
+
+            <li>&#169; Microsoft 2018</li>
+            
+        </ul>
+    </div>
+    
+</footer>
+
+
+
+
+    </div>
+            </div>
+
+    </section>
+	</div><!-- #page -->
+
+
+	<!-- Facebook Pixel Code -->
+	<script>
+		function facebookTracking() {
+			!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+				n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+				n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+				t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+				document,'script','https://connect.facebook.net/en_US/fbevents.js');
+			fbq('init', '435868603227390');
+			fbq('track', 'PageView');
+		}
+	</script>
+	<!-- End Facebook Pixel Code -->
+
+		<script type="text/javascript">
+		function twitterTracking() {
+			var script = document.createElement( 'script' );
+			script.setAttribute( 'type', 'text/javascript' );
+			script.setAttribute( 'src', '//platform.twitter.com/oct.js' );
+			script.onload = function() {
+				var track = document.createElement( 'script' );
+				track.setAttribute( 'type', 'text/javascript' );
+				track.innerHTML = "twttr.conversion.trackPid('nv9r3', { tw_sale_amount: 0, tw_order_quantity: 0 });";
+				document.body.appendChild( track );
+			};
+			document.body.appendChild( script );
+		}
+	</script>
+		<script type="text/javascript">
+		var _linkedin_data_partner_id = '7850';
+		function linkedinTracking(){
+			var s = document.getElementsByTagName("script")[0];
+			var b = document.createElement("script");
+			b.type = "text/javascript";b.async = true;
+			b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+			s.parentNode.insertBefore(b, s);
+		}
+	</script>
+	<link rel='stylesheet' id='genericons-css'  href='https://blogs.microsoft.com/iot/wp-content/plugins/jetpack/_inc/genericons/genericons/genericons.css?ver=3.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201811'></script>
+<script type='text/javascript' src='https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/scripts/mwf-auto-init-main.var.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var microsoftUhfSettings = {"homePath":"\/iot\/","loginUrl":"","logoutUrl":"","scripts":[],"inline":["facebookTracking","clicktaleTracking","twitterTracking","linkedinTracking"]};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://blogs.microsoft.com/iot/wp-content/plugins/microsoft-uhf/assets/microsoft-uhf.js?ver=0.3.5'></script>
+<script type='text/javascript' src='https://blogs.microsoft.com/iot/wp-includes/js/wp-embed.min.js'></script>
+<script type='text/javascript' src='https://stats.wp.com/e-201811.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:5.9',blog:'77982353',post:'6373',tz:'-7',srv:'blogs.microsoft.com'} ]);
+	_stq.push([ 'clickTrackerInit', '77982353', '6373' ]);
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+var _analytics_scr = document.createElement('script');
+_analytics_scr.type = 'text/javascript'; _analytics_scr.async = true; _analytics_scr.src = '/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1694930670';
+var _analytics_elem = document.getElementsByTagName('script')[0]; _analytics_elem.parentNode.insertBefore(_analytics_scr, _analytics_elem);
+})();
+// ]]>
+</script></body>
+</html>
