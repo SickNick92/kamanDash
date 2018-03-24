@@ -48,9 +48,9 @@
     
     <!-- Render IoT App -->
     <div ng-controller="main">
-      <div class="jumbotron">
+      <div class="jumbotron jumbotron-fluid">
 	<h1 class="display-4 text-center">Kaman IIoT</h1>
-	<h2 class="display-2 text-center">Fluid Data</h2>
+	<h4 class="lead text-center">Flowing Data for Industry 4.0</h2>
 	
 	<h5><i>(Please enter the below details and click connect)</i></h5>
 	<form ng-submit="main.connect()">
@@ -65,19 +65,21 @@
       </div>
 
       <!-- Line Chart -->
-      <div class="container">
-	<div class="card justify-content-center" ng-controller="lineChart">
-	  <div class="card-body">
-	    <div class="card-header">Line Chart</div>
-	    <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick"></canvas>
+      <div ng-if="data.length > 0">
+	<div class="container">
+	  <div class="card justify-content-center" ng-controller="lineChart">
+	    <div class="card-body">
+	      <div class="card-header">Line Chart</div>
+	      <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick"></canvas>
+	    </div>
 	  </div>
 	</div>
+	<div class="logData">
+	  <h4  ng-show="main.EventLog" >Device Event Log </h4>
+	  <pre class="events" ng-show="main.EventLog" style="height:200px;overflow-y:auto">{{main.EventLog}}</pre>
+	</div>
       </div>
-    
-      <h4  ng-show="main.EventLog" >Device Event Log </h4>
-      <pre class="events" ng-show="main.EventLog" style="height:200px;overflow-y:auto">{{main.EventLog}}</pre>
     </div>
-    
     <!-- Footer -->
     <p class="text-center text-muted">Copyright 2018 Kaman Corp.</p>
     
